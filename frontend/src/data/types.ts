@@ -30,6 +30,8 @@ export type PageResult = {
 export type ActionResult = {
   ok: boolean
   message: string
+  /** 命中幂等保护（如重复签收）：没有再次改动数据，只返回提示。 */
+  deduplicated?: boolean
 }
 
 export type OverviewResult = {
