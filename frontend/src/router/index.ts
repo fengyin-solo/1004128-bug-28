@@ -8,6 +8,7 @@ const Baggage = () => import('@/views/baggage/index.vue')
 const Cargo = () => import('@/views/cargo/index.vue')
 const Fueling = () => import('@/views/fueling/index.vue')
 const Catering = () => import('@/views/catering/index.vue')
+const CateringDetail = () => import('@/views/catering/detail.vue')
 const CabinClean = () => import('@/views/cabin_clean/index.vue')
 const Lavatory = () => import('@/views/lavatory/index.vue')
 const Deicing = () => import('@/views/deicing/index.vue')
@@ -31,6 +32,7 @@ const router = createRouter({
     { path: '/cargo', name: 'cargo', component: Cargo },
     { path: '/fueling', name: 'fueling', component: Fueling },
     { path: '/catering', name: 'catering', component: Catering },
+    { path: '/catering/:number', name: 'catering-detail', component: CateringDetail },
     { path: '/cabin_clean', name: 'cabin_clean', component: CabinClean },
     { path: '/lavatory', name: 'lavatory', component: Lavatory },
     { path: '/deicing', name: 'deicing', component: Deicing },

@@ -7,6 +7,7 @@
           {{ item.label }}
         </RouterLink>
       </nav>
+      <CabinTodoPanel />
     </aside>
     <main class="app-main">
       <header class="app-head">
@@ -19,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import CabinTodoPanel from '@/components/CabinTodoPanel.vue'
 import { useSessionStore } from '@/stores/session'
 
 const store = useSessionStore()

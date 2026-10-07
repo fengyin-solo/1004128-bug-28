@@ -35,3 +35,44 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+
+/* 侧边栏客舱清洁待办：其它页面与清洁清单共用同一数据源 */
+.todo-panel { margin-top: 18px; border-top: 1px solid #243044; padding-top: 12px; }
+.todo-head { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
+.todo-count { background: #b42318; color: #fff; border-radius: 999px; font-size: 11px; min-width: 18px; height: 18px; line-height: 18px; text-align: center; padding: 0 5px; }
+.todo-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.todo-link { display: flex; justify-content: space-between; gap: 8px; color: #cbd5e1; text-decoration: none; font-size: 12px; padding: 4px 6px; border-radius: 6px; background: #1b2536; }
+.todo-link:hover { background: #243044; }
+.todo-flight { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.todo-status { color: #f59e0b; flex-shrink: 0; }
+.todo-more .todo-link { justify-content: flex-start; color: #93c5fd; }
+.todo-empty { font-size: 12px; color: #64748b; margin: 0; }
+
+/* 规则提示与冲突标记 */
+.rule-banner { background: #eef5ff; border: 1px solid #bfd6ff; border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #1e4fa3; margin: 0 0 12px; }
+.tag { display: inline-block; border-radius: 999px; padding: 1px 8px; font-size: 11px; margin: 0 2px; }
+.tag.soft { background: #fef3c7; color: #92400e; }
+.tag.hard { background: #fee4e2; color: #b42318; }
+.tag.ok { background: #dcfce7; color: #166534; }
+.tag.info { background: #e0e7ff; color: #3730a3; }
+.tag.frozen { background: #e2e8f0; color: #334155; }
+
+/* 登记 / 覆盖弹层 */
+.modal-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.modal-card { background: #fff; border-radius: 10px; width: 520px; max-width: calc(100vw - 32px); max-height: calc(100vh - 64px); overflow: auto; padding: 18px 20px; }
+.modal-title { margin: 0 0 4px; font-size: 16px; }
+.modal-tip { color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+.form-grid { display: grid; grid-template-columns: 120px 1fr; gap: 8px 10px; align-items: center; font-size: 13px; }
+.form-grid input, .form-grid select, .form-grid textarea { width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font: inherit; }
+.form-grid textarea { resize: vertical; min-height: 56px; }
+.form-grid .full { grid-column: 1 / -1; }
+.form-check { display: flex; gap: 6px; align-items: center; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px; }
+
+/* 配餐详情 */
+.detail-grid { display: grid; grid-template-columns: 130px 1fr; gap: 8px 12px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 13px; max-width: 760px; }
+.detail-grid dt { color: var(--muted); }
+.detail-grid dd { margin: 0; }
+.detail-block { margin: 12px 0; }
+.detail-block h3 { font-size: 14px; margin: 0 0 8px; }
+.back-link { font-size: 13px; }
